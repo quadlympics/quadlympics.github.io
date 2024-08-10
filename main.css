@@ -1,0 +1,356 @@
+@font-face {
+    font-family: Paris2024;
+    src: url(/Paris2024-Variable.ttf);
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.desktop-container {
+    height: 100%;
+    width: 100%;
+    max-height: 800px;
+    max-width: 400px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {}
+
+.divider {
+    font-family: Paris2024, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider p {
+    transform: scale(0.0) rotateZ(-30deg);
+}
+
+@keyframes animate-in-divider-title {
+    0% {
+        transform: scale(0.0) rotateZ(-30deg);
+    }
+
+    100% {
+        transform: scale(1.0) rotateZ(0deg);
+    }
+}
+
+.divider.swiper-slide-fully-visible p {
+    animation: 1s 0.2s animate-in-divider-title forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.divider-green {
+    background-color: #0b8500;
+}
+
+.divider-blue {
+    background-color: #0000ac;
+}
+
+/* Welcome Slide Styles */
+
+.welcome {
+    background-color: white;
+    overflow: hidden;
+}
+
+.welcome-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-fish {
+    position: relative;
+    top: 0;
+    width: 80%;
+}
+
+@keyframes animate-in-welcome-fish {
+    0% {}
+
+    100% {
+        width: 50px;
+        top: 115px;
+    }
+}
+
+/** TODO replace with a fully-loaded class */
+.swiper-slide-fully-visible .welcome-fish {
+    animation: 1s 1s animate-in-welcome-fish forwards cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.welcome-flame {
+    width: 1px;
+}
+
+@keyframes animate-in-welcome-flame {
+    0% {}
+
+    100% {
+        width: 320px;
+    }
+}
+
+/** TODO replace with a fully-loaded class */
+.swiper-slide-fully-visible .welcome-flame {
+    animation: 1s 1s animate-in-welcome-flame forwards cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.welcome-title {
+    font-family: Paris2024, sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.welcome-title-left {
+    top: -220px;
+    left: -100%;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.welcome-title-right {
+    top: 220px;
+    font-size: 80px;
+    right: -100%;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+@keyframes animate-in-welcome-title-left {
+    0% {}
+
+    100% {
+        left: 0;
+    }
+}
+
+/** TODO replace with a fully-loaded class */
+.swiper-slide-fully-visible .welcome-title-left {
+    animation: 1s 1.8s animate-in-welcome-title-left forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+    ;
+}
+
+@keyframes animate-in-welcome-title-right {
+    0% {}
+
+    100% {
+        right: 0;
+    }
+}
+
+/** TODO replace with a fully-loaded class */
+.swiper-slide-fully-visible .welcome-title-right {
+    animation: 1s 2.0s animate-in-welcome-title-right forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Game Slide Styles */
+
+.game {
+    background-color: #0b8500;
+    perspective: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-category {
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.game-card {
+    transform-style: preserve-3d;
+    height: 400px;
+    width: 281px;
+    transform: rotateZ(-10deg);
+    position: absolute;
+    top: -100%;
+}
+
+@keyframes animate-in-game-card {
+    0% {}
+
+    30% {
+        top: 50%;
+        transform: translateY(-50%) rotateZ(10deg) rotateY(0deg);
+    }
+
+    40% {
+        top: 50%;
+        transform: translateY(-50%) rotateZ(10deg) rotateY(0deg);
+    }
+
+    100% {
+        top: 50%;
+        transform: translateY(-50%) rotateZ(-10deg) rotateY(180deg);
+    }
+}
+
+.swiper-slide-fully-visible .game-card {
+    animation: 5s 2s animate-in-game-card forwards;
+}
+
+.game-card-face {
+    border-radius: 10px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.game-card-front {
+    background: url(/card.png) white;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+
+.game-card-back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+}
+
+.game-card-face p {
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Team Slide Styles */
+
+.team {
+    background-color: #0000ac;
+    color: white;
+}
+
+.name-roll {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    font-weight: 700;
+}
+
+.name-roll ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    opacity: 0;
+}
+
+.swiper-slide-fully-visible .name-roll ol {
+    opacity: 1;
+}
+
+.name-roll:nth-child(1) ol {
+    transition: top 5s cubic-bezier(.34, .99, .86, 1.04), opacity 500ms linear;
+}
+
+.name-roll:nth-child(2) ol {
+    transition: top 7s cubic-bezier(.34, .99, .86, 1.04), opacity 500ms linear;
+}
+
+@keyframes loop-name-roll-overlay {
+    0% {
+        letter-spacing: 0;
+    }
+
+    100% {
+        letter-spacing: 1px;
+    }
+}
+
+.name-roll-overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 172, 1) 0%,
+            rgba(0, 0, 172, 1) 10%,
+            rgba(0, 0, 172, 0) 50%,
+            rgba(0, 0, 172, 1) 90%,
+            rgba(0, 0, 172, 1) 100%);
+    z-index: 11;
+}
+
+.name-roll-overlay p {
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    animation: 1s ease loop-name-roll-overlay infinite alternate-reverse;
+}
+
+.name-roll li {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.swiper-slide-fully-visible .name-roll-revealed {
+    font-size: 60px;
+}
+
+.swiper-slide-fully-visible .name-roll-revealed,
+.swiper-slide-fully-visible .name-roll-overlay p {
+    color: yellow;
+}
+
+.name-roll:nth-child(1) .name-roll-revealed,
+.name-roll:nth-child(1) .name-roll-overlay p {
+    transition: all 0.5s 5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.name-roll:nth-child(2) .name-roll-revealed,
+.name-roll:nth-child(2) .name-roll-overlay p {
+    transition: all 0.5s 7s cubic-bezier(0.85, 0, 0.15, 1);
+}

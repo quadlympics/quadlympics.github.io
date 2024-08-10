@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quadlympics 2024</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <!-- TODO add Google Analytics -->
+    <!-- TODO add favicon -->
+</head>
+
+<body>
+    <div class="desktop-container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide divider divider-green">
+                    <p>Games</p>
+                </div>
+
+                <div class="swiper-slide game">
+                    <div class="game-category">Athletic<br />Event</div>
+                    <div class="game-card">
+                        <div class="game-card-face game-card-front"></div>
+                        <div class="game-card-face game-card-back">
+                            <p>Spikeball</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide team">
+                    <div class="name-roll name-roll-top" data-revealed-name="A"></div>
+                    <div class="name-roll" data-revealed-name="F"></div>
+                </div>
+
+                <div class="swiper-slide welcome">
+                    <div class="welcome-container">
+                        <img src="/logo-flame.png" class="welcome-flame" />
+                    </div>
+                    <div class="welcome-container">
+                        <img src="/logo-fish.svg" class="welcome-fish" />
+                    </div>
+                    <div class="welcome-container">
+                        <p class="welcome-title welcome-title-left">Quadlympics</p>
+                    </div>
+                    <div class="welcome-container">
+                        <p class="welcome-title welcome-title-right">2024</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide divider divider-blue">
+                    <p>Teams</p>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/main.js"></script>
+
+</body>
+
+</html>
