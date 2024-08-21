@@ -1,3 +1,9 @@
+const FULLY_VISIBLE_CLASS_NAME = 'swiper-slide-fully-visible-or-transitioning-out';
+
+const TEAM_MEMBERS = [
+    'A A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'
+];
+
 const swiper = new Swiper('.swiper', {
     watchSlidesProgress: true,
 
@@ -5,12 +11,15 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+
+    on: {
+        transitionEnd: function (e) {
+            console.log('Transition End', e.activeIndex, e.previousIndex);
+            e.slides[e.activeIndex].classList.add(FULLY_VISIBLE_CLASS_NAME);
+            e.slides[e.previousIndex].classList.remove(FULLY_VISIBLE_CLASS_NAME);
+        },
+    }
 });
-
-const team_members = [
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'
-];
-
 
 // TODO also compute this on page resize
 function setTeamSlidesRevealPosition() {
@@ -37,27 +46,29 @@ function setTeamSlidesRevealPosition() {
         // Vertically center the targeted element.
         const computedHeight = -revealedNameOffset + (rollViewport / 2) - (revealedNameHeight / 2)
 
-        const htmlId = `name-roll-revealed-${name}`
+        // Remove spaces and make name fully lowercase for the attribute.
+        const nameForId = name.replace(' ', '').toLowerCase()
+        const htmlId = `name-roll-revealed-${nameForId}`
         roll.setAttribute('id', htmlId)
-        rules += `.swiper-slide-fully-visible #${htmlId} ol { top: ${computedHeight}px; } `
+        rules += `.${FULLY_VISIBLE_CLASS_NAME} #${htmlId} ol { top: ${computedHeight}px; } `
     });
     styles.replace(rules);
 }
 
-function init_team_slides() {
+function initTeamSlides() {
 
     // Create a name list, with several copies per name, that can be put in every container.
-    const list_of_names = document.createElement('ol');
-    for (let i = 0; i < team_members.length * 5; i++) {
-        const name = team_members[i % (team_members.length)]
+    const listOfNamesEl = document.createElement('ol');
+    for (let i = 0; i < TEAM_MEMBERS.length * 5; i++) {
+        const name = TEAM_MEMBERS[i % (TEAM_MEMBERS.length)]
         let li = document.createElement('li')
         li.innerText = name
-        list_of_names.append(li)
+        listOfNamesEl.append(li)
     }
 
     document.querySelectorAll('.name-roll').forEach((roll) => {
         // First, make a copy of the displayed names list.
-        roll.appendChild(list_of_names.cloneNode(true));
+        roll.appendChild(listOfNamesEl.cloneNode(true));
         // Also create the overlay element.
         const overlayEl = document.createElement('div');
         overlayEl.classList.add('name-roll-overlay');
@@ -70,4 +81,12 @@ function init_team_slides() {
     setTeamSlidesRevealPosition();
 }
 
-init_team_slides();
+initTeamSlides();
+
+// Add classes that trigger animations once everything has loaded.
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+        document.querySelector("body").classList.add('page-loaded');
+        swiper.slides[swiper.activeIndex].classList.add(FULLY_VISIBLE_CLASS_NAME);
+    }
+};

@@ -6,36 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quadlympics 2024</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="main.css" />
-    <!-- TODO add Google Analytics -->
+
     <!-- TODO add favicon -->
+    <!-- TODO add OG tags -->
 </head>
 
 <body>
     <div class="desktop-container">
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide divider divider-green">
-                    <p>Games</p>
-                </div>
-
-                <div class="swiper-slide game">
-                    <div class="game-category">Athletic<br />Event</div>
-                    <div class="game-card">
-                        <div class="game-card-face game-card-front"></div>
-                        <div class="game-card-face game-card-back">
-                            <p>Spikeball</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide team">
-                    <div class="name-roll name-roll-top" data-revealed-name="A"></div>
-                    <div class="name-roll" data-revealed-name="F"></div>
-                </div>
 
                 <div class="swiper-slide welcome">
                     <div class="welcome-container">
@@ -52,9 +38,82 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide divider divider-blue">
+                <div class="swiper-slide divider divider-game">
+                    <p>Games</p>
+                </div>
+
+                <div class="swiper-slide game">
+                    <div class="game-category">Athletic<br />Event</div>
+                    <div class="game-card">
+                        <div class="game-card-face game-card-front"></div>
+                        <div class="game-card-face game-card-back">
+                            <p>Spikeball</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide divider divider-team">
                     <p>Teams</p>
                 </div>
+
+                <div class="swiper-slide team">
+                    <div class="name-roll name-roll-top" data-revealed-name="A A"></div>
+                    <div class="name-roll" data-revealed-name="F"></div>
+                </div>
+
+                <div class="swiper-slide team team-recap">
+                    <ol class="recap-names recap-names-left">
+                        <li>A A</li>
+                        <li>C</li>
+                        <li>E</li>
+                    </ol>
+
+                    <ol class="recap-names recap-names-plus">
+                        <li>+</li>
+                        <li>+</li>
+                        <li>+</li>
+                    </ol>
+
+                    <ol class="recap-names recap-names-right">
+                        <li>B</li>
+                        <li>D</li>
+                        <li>F</li>
+                    </ol>
+                </div>
+
+                <div class="swiper-slide winners">
+
+                    <div class="winners-plaque-set">
+                        <div class="winners-plaque-wrapper">
+                            <div class="winners-plaque">
+                                <div class="winners-plaque-names">Join the</div>
+                                <div class="winners-plaque-year">Hall of Winners</div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-left"></div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-right"></div>
+                            </div>
+                        </div>
+
+                        <div class="winners-plaque-wrapper">
+                            <div class="winners-plaque">
+                                <div class="winners-plaque-year">2015</div>
+                                <div class="winners-plaque-names">Ben D &amp; Zach</div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-left"></div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-right"></div>
+                            </div>
+                        </div>
+
+                        <div class="winners-plaque-wrapper">
+                            <div class="winners-plaque">
+                                <div class="winners-plaque-year">2016</div>
+                                <div class="winners-plaque-names">Ben D &amp; Zach</div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-left"></div>
+                                <div class="winners-plaque-rivet winners-plaque-rivet-right"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
             <div class="swiper-button-prev"></div>
