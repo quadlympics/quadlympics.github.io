@@ -307,16 +307,6 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     transition: top 7s cubic-bezier(.34, .99, .86, 1.04), opacity 500ms linear;
 }
 
-@keyframes loop-name-roll-overlay {
-    0% {
-        letter-spacing: 0;
-    }
-
-    100% {
-        letter-spacing: 1px;
-    }
-}
-
 .name-roll-overlay {
     height: 100%;
     width: 100%;
@@ -338,7 +328,43 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     line-height: 60px;
     text-align: center;
     color: white;
-    animation: 1s ease loop-name-roll-overlay infinite alternate-reverse;
+}
+
+.name-roll-overlay .icon-arrow-left,
+.name-roll-overlay .icon-arrow-right {
+    height: 30px;
+    position: relative;
+    top: -7px;
+    padding: 0 140px;
+}
+
+@keyframes loop-name-roll-overlay-icon-left {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -40px;
+    }
+}
+
+@keyframes loop-name-roll-overlay-icon-right {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 40px;
+    }
+}
+
+.name-roll-overlay .icon-arrow-left {
+    animation: 1s ease loop-name-roll-overlay-icon-left infinite alternate-reverse;
+}
+
+.name-roll-overlay .icon-arrow-right {
+    transform: scaleX(-1);
+    animation: 1s ease loop-name-roll-overlay-icon-right infinite alternate-reverse;
 }
 
 .name-roll li {
@@ -437,43 +463,6 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     }
 }
 
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-left li:nth-child(1) {
-    animation: 1s 0s recap-name-left-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-left li:nth-child(2) {
-    animation: 1s 0.5s recap-name-left-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-left li:nth-child(3) {
-    animation: 1s 1s recap-name-left-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-right li:nth-child(1) {
-    animation: 1s 0s recap-name-right-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-right li:nth-child(2) {
-    animation: 1s 0.5s recap-name-right-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-right li:nth-child(3) {
-    animation: 1s 1s recap-name-right-fly-in cubic-bezier(.22, 1.3, .64, 1.01) forwards;
-}
-
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-plus li:nth-child(1) {
-    animation: 0.5s 0s recap-plus-fade-in forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-plus li:nth-child(2) {
-    animation: 0.5s 0.5s recap-plus-fade-in forwards;
-}
-
-.swiper-slide-fully-visible-or-transitioning-out .recap-names-plus li:nth-child(3) {
-    animation: 0.5s 1s recap-plus-fade-in forwards;
-}
 
 /* Hall of Winners Styles */
 
@@ -495,12 +484,12 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     }
 
     100% {
-        top: -100%;
+        top: -200%;
     }
 }
 
 .swiper-slide-fully-visible-or-transitioning-out .winners-plaque-set {
-    animation: 20s winners-plaque-set-scroll linear forwards;
+    animation: 30s winners-plaque-set-scroll linear forwards;
 }
 
 .winners-plaque-wrapper {
@@ -547,4 +536,73 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 
 .winners-plaque-rivet-right {
     right: 20px;
+}
+
+/* Logistics Slide Styles */
+
+.divider-logistics {
+    background: red;
+}
+
+.logistics {
+    background: red;
+}
+
+.logistics-block {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes logistics-fly-in-from-right {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes logistics-fly-in-from-left {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.logistics-block p {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    top: 5px;
+    left: 500px;
+    line-height: 40px;
+}
+
+.logistics-block img {
+    height: 80px;
+    padding: 0 30px;
+    position: relative;
+    left: -200px;
+}
+
+.swiper-slide-fully-visible-or-transitioning-out .logistics-block p {
+    animation: 1s 0.5s logistics-fly-in-from-right forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.swiper-slide-fully-visible-or-transitioning-out .logistics-block img {
+    animation: 1s 0s logistics-fly-in-from-left forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Closing Slide */
+
+.divider-closing {
+    background: white;
+    color: black;
 }
