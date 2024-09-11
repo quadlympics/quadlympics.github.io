@@ -262,9 +262,15 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 .game-card-face p {
     text-align: center;
     font-size: 40px;
+    line-height: 35px;
     color: black;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.game-card-detail {
+    font-size: 30px;
+    line-height: 25px;
 }
 
 /* Team Slide Styles */
@@ -484,7 +490,7 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     }
 
     100% {
-        top: -200%;
+        top: -2500px;
     }
 }
 
@@ -546,17 +552,25 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 
 .logistics {
     background: red;
+    position: relative;
+    overflow: hidden;
 }
 
 .logistics-block {
-    height: 50%;
+    height: 20%;
+    margin: 20% 0;
     display: flex;
     align-items: center;
 }
 
+.logistics-block-inner {
+    text-align: center;
+    width: 100%;
+}
+
 @keyframes logistics-fly-in-from-right {
     0% {
-        left: 500px;
+        left: 400px;
     }
 
     100% {
@@ -566,7 +580,7 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 
 @keyframes logistics-fly-in-from-left {
     0% {
-        left: -200px;
+        left: -400px;
     }
 
     100% {
@@ -575,21 +589,23 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 }
 
 .logistics-block p {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
     position: relative;
     top: 5px;
-    left: 500px;
-    line-height: 40px;
+    left: 400px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+    margin: 0
 }
 
 .logistics-block img {
     height: 80px;
-    padding: 0 30px;
     position: relative;
-    left: -200px;
+    left: -400px;
 }
 
 .swiper-slide-fully-visible-or-transitioning-out .logistics-block p {

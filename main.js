@@ -2,7 +2,20 @@ const FULLY_VISIBLE_CLASS_NAME = 'swiper-slide-fully-visible-or-transitioning-ou
 
 // List of all team members, in a random order for the scrolling reveal.
 const TEAM_MEMBERS = [
-    'ANDREW', 'BEN D', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'
+    'ANDREW',
+    'BEN D',
+    'BEN L',
+    'EMILY',
+    'GIA',
+    'IAN',
+    'LILY',
+    'LYUBA',
+    'MEGAN',
+    'MEL',
+    'MOLLY',
+    'SAM',
+    'SARA',
+    'ZACH',
 ];
 
 const swiper = new Swiper('.swiper', {
@@ -23,7 +36,12 @@ const swiper = new Swiper('.swiper', {
 
 const teamSlidePositionRules = new CSSStyleSheet();
 const teamRecapSequentialAnimationRules = new CSSStyleSheet();
-document.adoptedStyleSheets = [teamSlidePositionRules, teamRecapSequentialAnimationRules];
+const winnersSequentialFlashRules = new CSSStyleSheet()
+document.adoptedStyleSheets = [
+    teamSlidePositionRules,
+    teamRecapSequentialAnimationRules,
+    winnersSequentialFlashRules,
+];
 
 function setTeamSlidePositionRules() {
     let rules = "";
@@ -76,7 +94,7 @@ function initTeamSlides() {
 }
 initTeamSlides();
 
-// Create a set of animations with a different delay each. This is tedious in CSS alone.
+// Create a set of animations with a different delay each.
 function buildTeamRecapSequentialAnimationRules() {
     const numTeams = TEAM_MEMBERS.length / 2;
     let rules = "";
@@ -96,8 +114,8 @@ function buildTeamRecapSequentialAnimationRules() {
         }
         `
     }
-    console.debug("Replacing teamRecapSequentialAnimationRules", rules)
-    teamRecapSequentialAnimationRules.replace(rules)
+    console.debug("Replacing teamRecapSequentialAnimationRules", rules);
+    teamRecapSequentialAnimationRules.replace(rules);
 }
 buildTeamRecapSequentialAnimationRules();
 
