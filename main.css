@@ -194,6 +194,7 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     height: 100%;
     width: 100%;
     font-size: 40px;
+    line-height: 40px;
     color: white;
     display: flex;
     justify-content: center;
@@ -233,7 +234,7 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 }
 
 .swiper-slide-fully-visible-or-transitioning-out .game-card {
-    animation: 5s 2s animate-in-game-card forwards;
+    animation: 5s 1s animate-in-game-card forwards;
 }
 
 .game-card-face {
@@ -266,11 +267,13 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
     color: black;
     font-weight: 900;
     text-transform: uppercase;
+    margin: 0;
 }
 
-.game-card-detail {
+.game-card-face p.game-card-detail {
     font-size: 30px;
     line-height: 25px;
+    margin-top: 10px;
 }
 
 /* Team Slide Styles */
