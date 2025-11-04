@@ -1,8 +1,3 @@
-@font-face {
-    font-family: Paris2024;
-    src: url(/Paris2024-Variable.ttf);
-}
-
 html,
 body {
     position: relative;
@@ -32,8 +27,8 @@ body {
 }
 
 :root {
-    --swiper-navigation-color: #d7c378;
-    --swiper-pagination-color: #d7c378;
+    --swiper-navigation-color: #f3c408;
+    --swiper-pagination-color: #f3c408;
 }
 
 .swiper {
@@ -42,11 +37,11 @@ body {
 }
 
 .divider {
-    font-family: Paris2024, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
     color: white;
+    background: black;
     font-size: 80px;
     text-transform: uppercase;
     line-height: 70px;
@@ -76,7 +71,7 @@ body {
 /* Welcome Slide Styles */
 
 .welcome {
-    background-color: white;
+    background-color: black;
     overflow: hidden;
 }
 
@@ -101,8 +96,8 @@ body {
     0% {}
 
     100% {
-        width: 50px;
-        top: 115px;
+        width: 86px;
+        top: 59px;
     }
 }
 
@@ -126,61 +121,7 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-flame
     animation: 1s 1s animate-in-welcome-flame forwards cubic-bezier(0.85, 0, 0.15, 1);
 }
 
-.welcome-title {
-    font-family: Paris2024, sans-serif;
-    margin: 0;
-    text-transform: uppercase;
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 4px;
-}
-
-.welcome-title-left {
-    top: -190px;
-    left: -100%;
-    font-size: 40px;
-    line-height: 40px;
-}
-
-.welcome-title-right {
-    top: 190px;
-    font-size: 80px;
-    right: -100%;
-    font-size: 60px;
-    line-height: 60px;
-}
-
-@keyframes animate-in-welcome-title-left {
-    0% {}
-
-    100% {
-        left: 0;
-    }
-}
-
-body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title-left {
-    animation: 1s 1.8s animate-in-welcome-title-left forwards cubic-bezier(0.34, 1.56, 0.64, 1);
-    ;
-}
-
-@keyframes animate-in-welcome-title-right {
-    0% {}
-
-    100% {
-        right: 0;
-    }
-}
-
-body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title-right {
-    animation: 1s 2.0s animate-in-welcome-title-right forwards cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
 /* Game Slide Styles */
-
-
-.divider-game {
-    background-color: #0b8500;
-}
 
 .game {
     background-color: #0b8500;
@@ -549,79 +490,87 @@ body.page-loaded .swiper-slide-fully-visible-or-transitioning-out .welcome-title
 
 /* Logistics Slide Styles */
 
-.divider-logistics {
-    background: red;
-}
-
 .logistics {
     background: red;
     position: relative;
     overflow: hidden;
 }
 
-.logistics-block {
-    height: 20%;
-    margin: 20% 0;
+.logistics-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
-.logistics-block-inner {
-    text-align: center;
-    width: 100%;
-}
-
-@keyframes logistics-fly-in-from-right {
-    0% {
-        left: 400px;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes logistics-fly-in-from-left {
-    0% {
-        left: -400px;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-.logistics-block p {
-    font-size: 30px;
+.logistics-block {
+    font-size: 35px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
     position: relative;
-    top: 5px;
-    left: 400px;
-    line-height: 30px;
+    line-height: 40px;
     text-align: center;
     width: 100%;
     margin: 0
 }
 
-.logistics-block img {
-    height: 80px;
-    position: relative;
-    left: -400px;
+
+.logistics-block-left {
+    left: -100%;
 }
 
-.swiper-slide-fully-visible-or-transitioning-out .logistics-block p {
-    animation: 1s 0.5s logistics-fly-in-from-right forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+@keyframes animate-in-logistics-block-left {
+    0% {}
+
+    100% {
+        left: 0;
+    }
 }
 
-.swiper-slide-fully-visible-or-transitioning-out .logistics-block img {
-    animation: 1s 0s logistics-fly-in-from-left forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+.swiper-slide-fully-visible-or-transitioning-out .logistics-block-left {
+    animation: 1s 0.5s animate-in-logistics-block-left forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes animate-in-logistics-block-right {
+    0% {}
+
+    100% {
+        right: 0;
+    }
+}
+
+.logistics-block-right {
+    right: -100%;
+}
+
+.swiper-slide-fully-visible-or-transitioning-out .logistics-block-right {
+    animation: 1s 1s animate-in-logistics-block-right forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes animate-in-logistics-img {
+    0% {
+        transform: rotate(-360deg) scale(0.0);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1.0);
+    }
+}
+
+.logistics-img-container {
+    height: 140px;
+}
+
+.logistics-img {
+    height: 100px;
+    margin: 20px 0;
+    transform: scale(0.0);
+}
+
+.swiper-slide-fully-visible-or-transitioning-out .logistics-img {
+    animation: 1s 0s animate-in-logistics-img forwards cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Closing Slide */
-
-.divider-closing {
-    background: white;
-    color: black;
-}

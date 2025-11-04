@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-0.84666665 -1.6933334 15.345831 11.781239"
+   version="1.1"
+   x="0px"
+   y="0px"
+   id="svg2"
+   sodipodi:docname="icon-shirt.svg"
+   inkscape:export-filename="icon-shirt.svg"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   width="15.345832"
+   height="11.781239"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="51.312335"
+     inkscape:cx="7.6687214"
+     inkscape:cy="7.1620207"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     id="g1"
+     transform="translate(-1.6404171,-4.2693806)">
+    <path
+       style="color:#000000;fill:#ffffff"
+       d="m 10.745636,2.5760472 c -0.61758,0.28191 -1.4105897,0.457137 -2.2781697,0.457137 -0.86685,0 -1.66068,-0.1751 -2.27815,-0.4566 0.28662,0.989019 1.19187,1.708081 2.27815,1.708081 1.08646,0 1.9916797,-0.719343 2.2781697,-1.708618 z m -5.1118797,0.05378 -4.66655999,1.691947 a 0.26461841,0.26461841 0 0 0 -0.1678,0.302786 l 0.61686999,2.951496 a 0.26461841,0.26461841 0 0 0 0.26029,0.21082 h 2.6955 v 6.3047298 a 0.26461841,0.26461841 0 0 0 0.26353,0.26568 h 7.6621597 a 0.26461841,0.26461841 0 0 0 0.26352,-0.26568 V 7.7868762 h 2.69765 a 0.26461841,0.26461841 0 0 0 0.25815,-0.21082 l 0.61687,-2.951496 a 0.26461841,0.26461841 0 0 0 -0.16779,-0.302786 l -4.66496,-1.691409 c -0.32013,1.269824 -1.4676697,2.205017 -2.8337197,2.205017 -1.36624,0 -2.51376,-0.935474 -2.83371,-2.205555 z"
+       fill="#000000"
+       stroke-width="1.00003"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path1" />
+  </g>
+</svg>
